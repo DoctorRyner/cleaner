@@ -12,7 +12,7 @@ library:
   source-dirs: src
 
 executables:
-  kek-exe:
+  cleaner:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
