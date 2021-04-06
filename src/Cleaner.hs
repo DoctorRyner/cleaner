@@ -14,7 +14,7 @@ lineCheck line =
 replacePcm :: T.Text -> T.Text
 replacePcm line =
     if T.isInfixOf "pcm" line
-    then T.dropEnd 1 (T.replace "pcm " "[" line) <> ".ogg];"
+    then T.replace "pcm " "[" line <> ".ogg];"
     else line
 
 clean :: FilePath -> IO ()
