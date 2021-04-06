@@ -21,6 +21,6 @@ clean :: FilePath -> IO ()
 clean fileName = do
     file <- T.lines <$> TIO.readFile fileName
 
-    let output = T.concat $ map ((<> "\n") . replacePcm) $ filter lineCheck file
+    let output = T.concat $ map ((<> "\r\n") . replacePcm) $ filter lineCheck file
 
     TIO.writeFile (fileName ++ ".output") output
