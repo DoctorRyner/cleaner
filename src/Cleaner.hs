@@ -8,7 +8,7 @@ import Data.Maybe
 
 lineCheck :: T.Text -> Bool
 lineCheck line =
-       any (flip T.isInfixOf line) ["#ama", "pcm "]
+       any (`T.isInfixOf` line) ["#ama", "pcm "]
     || T.any (\x -> isKanji x || isHiragana x || isKatakana x) line
 
 replacePcm :: T.Text -> T.Text
